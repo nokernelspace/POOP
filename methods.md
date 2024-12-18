@@ -21,8 +21,8 @@ then the call hierchy of child object's method calls are as follows
 
 ```
 ABC.methodA()
+ ↑
  |
- ↓
 DEF.methodA()
 ```
 
