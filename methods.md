@@ -26,7 +26,7 @@ ABC.methodA()
 DEF.methodA()
 ```
 
-if a child object would like to prevent this call stack they can insert the `override` keyword
+if a child object would like to interrupt this call stack from occuring it can insert the `override` keyword
 
 Example
 ```

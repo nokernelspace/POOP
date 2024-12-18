@@ -10,8 +10,8 @@ Example
 ```
 
 struct ABC { 
-    int a;
-    int b;
+    int a = 1;
+    int b = 2;
 
     void methodA(){
         printf("Hello World\n");
@@ -25,7 +25,7 @@ struct ABC {
 
 
 struct DEF : ABC {
-    int a;
+    int a = 3;
     void methodA(){
         /// This node in the callstack does nothing
     }
@@ -36,7 +36,8 @@ struct GHI : DEF {
     int a;
     void methodA(){
         override;
-        super.a = super.super.a + super.super.b;
+        a = super.a = super.super.a + super.super.b;
+        printf("%d\n", a);
 
         // Code goes here... 
         super.super.methodB();
@@ -51,6 +52,7 @@ int main(){
 
 Output
 ```
+6
 You are now in Method B
 ```
 
